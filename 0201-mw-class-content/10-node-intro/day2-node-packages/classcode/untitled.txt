@@ -1,0 +1,26 @@
+//bottom half
+function deposit(){
+	fs.appendFile('bank.txt', ", " + value);
+
+	console.log("Deposited " + value + ".");
+}
+
+function withdraw(){
+	fs.appendFile('bank.txt', ", -" + value);
+
+	console.log("Withdrew " + value + ".");
+}
+
+function lotto(){
+	var chance = Math.floor((Math.random() * 10) + 1);
+	
+	console.log(chance);
+	
+	if (chance === 1){
+		fs.appendFile('bank.txt', ", 2");
+		console.log("Congrats you won the lottery!");
+	} else{
+		fs.appendFile('bank.txt', ", -.25");
+		console.log("Deposited .25...... You did not win.");
+	}
+}

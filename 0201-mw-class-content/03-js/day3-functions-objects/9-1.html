@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//problem one
+		//write a function that takes in 3 arguments, adds them together and returns the value
+
+		//console.log(4 + 3 +2);
+
+		// function addValues(a, b, c){
+		// 	return a + b + c;
+		// }
+
+		// console.log(addValues(3, 7, 232332323));
+		// console.log(addValues(6, 7, 34));
+		// console.log(addValues(3, 9, 232332323));
+		// console.log(addValues(34343, 7, 232332323));
+
+	//problem two
+		// function multVals(a, b, c){
+		// 	return a * b * c;
+		// }
+
+		// console.log(multVals(3, 7, 2));
+		// console.log(multVals(6, 7, 34));
+		// console.log(multVals(3, 9, 2));
+		// console.log(multVals(3, 7, 2));
+
+	//problem three
+		// function checkIfStrings(a, b, c){
+		// 	if (isNaN(a) && isNaN(b) && isNaN(c)){
+		// 		alert('all are strings!')
+		// 	}else{
+		// 		alert('all of them are not strings')
+		// 	}
+		// }
+
+		// checkIfStrings('djfksdj', "", 'stuff');
+		// checkIfStrings(6, 7, 34);
+		// checkIfStrings(3, 9, 2);
+		// checkIfStrings(3, 7, 2);
+
+	//problem four
+		function vowelCheck(wordOne, wordTwo, wordThree){
+			var vowels = ['a', 'i', 'e', 'o', 'u'];
+
+			if ((vowels.indexOf(wordOne[0]) > -1) && (vowels.indexOf(wordTwo[0]) > -1) && (vowels.indexOf(wordThree[0]) > -1)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		console.log(vowelCheck('ihristian', "arankie", 'uicole'));
+
+	/*
+		write a function that takes in 3 arguments, multiples them and returns the value
+
+		write a function that takes in 3 arguments, checks if they are all strings, and if they are then alert: all are strings!
+
+		write a function that takes in 3 arguments, checks if they start with a vowel and return true or false based on that 
+	*/
+</script>
+</body>
+</html>

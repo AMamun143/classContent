@@ -1,0 +1,34 @@
+<!doctype>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input type="text" id="funThing">
+<input type="submit" value="submit" id="save">
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script type="text/javascript">
+
+	//stores the array in local storage
+	localStorage.setItem('thingsToDo', JSON.stringify(["eastern state penitentuary", "build robots", "watch the Giants kill the Cowboys", "Watch hockey,basketball", "Swim across the East River", "Play Guitar", "Go to concerts", "Go to Shaan's concert or Dan's concert", "Go Skydiving", "Kickboxing", "Watch Soccer", "Play a round of golf in Ireland"]));
+	
+	$('#save').on('click', function(){
+		var funThing = $('#funThing').val();
+
+		var storageThingsString = localStorage.getItem('thingsToDo'); //it gives me the array from local storage but as a string
+		
+		var storageThingsArray = JSON.parse(storageThingsString);
+
+		storageThingsArray.push(funThing);
+
+		localStorage.setItem('thingsToDo', JSON.stringify(storageThingsArray))
+
+		console.log(localStorage.getItem('thingsToDo'));
+	});
+
+	
+</script>
+</body>
+</html>

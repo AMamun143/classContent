@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Passcode</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div id=""><h1>Passcode!</h1></div>
+
+		<button class="number" data-name="one"><h3>ONE</h3></button>
+		<button class="number" data-name="two"><h3>TWO</h3></button>
+		<button class="number" data-name="three"><h3>THREE</h3></button>
+		<button class="number" data-name="four"><h3>FOUR</h3></button>
+
+	    <script type="text/javascript">
+	    	$( document ).ready(function() {
+
+	    		var userInput = [];
+	    		var correctSequence = ['one', 'two', 'two', 'three'];
+
+	    		var gotIn = true;
+
+	    		$( ".number" ).on('click', function() {
+	    			userInput.push($(this).data('name'));
+
+	    			for(var i=0; i< userInput.length; i++){
+	    				if (userInput[i] == correctSequence[i]){
+	    					gotIn = true;
+	    				}else{
+	    					gotIn = false;
+	    				}
+	    			}
+
+	    			if (userInput.length == correctSequence.length){
+	    				if (gotIn == true){
+	    					alert('You got in!')
+	    				}else{
+	    					alert('You did not get in!')
+	    				}
+	    			}
+	    			
+	    		});
+
+	    	});
+			/*
+				* You are given the following HTML. Using jQuery, complete the following:
+					* Create a click event on every "number" class.
+					* Whenever a number is clicked, store it into an array
+					* If the user correctly inputs one, two, two then alert that they got in.
+					* If the user inputs 9 numbers and was wrong, alert them that they got it wrong.
+
+			*/
+	    </script>
+	</body>
+</html>

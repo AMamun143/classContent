@@ -1,0 +1,2 @@
+* students will demonstrate their knowledge of scope in JavaScript by solving hard scoping problems
+* students will use click events with jQuery

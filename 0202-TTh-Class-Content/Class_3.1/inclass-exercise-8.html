@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    data types, user input, conditional logic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    var animals = ['parrot', 'cat', 'dog'];
+
+    console.log(animals.length);
+    console.log(animals[1]);
+    console.log(animals[2]);    
+    console.log(animals[0]);
+    console.log(animals[animals.length]);
+    console.log(animals[animals.length-1]);
+    console.log(animals.indexOf('bear'));
+    console.log(animals.indexOf('parrot'));
+
+console.log(animals)
+
+animals.push('bear') //pushes to the end
+
+console.log(animals)
+console.log(animals.length)
+
+animals.unshift('rabbit') //pushes to beginning // returns the new array length
+console.log(animals)
+console.log(animals.length)
+
+//console.log(animals.pop())
+animals[0] = 'lion'; //replaces a value in an array
+console.log(animals);
+
+animals.pop() //removes the last element of the array //also returns that element as a value
+
+
+//check if something exists in an array or not
+if (animals.indexOf('bear') == -1) {
+//  alert('not in the list man');
+}else{
+  alert('in the list man')
+}
+
+animals.pop() //removes the last element of the array //also returns that element as a value
+console.log(animals)
+console.log(animals.length)
+
+//choose random option from an array
+var ranNumZeroToArrLength = Math.random() * animals.length;
+var roundedNum = Math.floor(ranNumZeroToArrLength);
+
+var randomComputerOption = animals[roundedNum];
+console.log(roundedNum);
+console.log(randomComputerOption);
+
+
+</script>
+</body>
+</html>

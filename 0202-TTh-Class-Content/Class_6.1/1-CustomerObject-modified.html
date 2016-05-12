@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<div id="smiling"></div>
+
+<script>
+
+var face={
+"face": [
+    {
+      "attribute": {
+        "age": {
+          "range": 5,
+          "value": 27
+        },
+        "gender": {
+          "confidence": 99.8669,
+          "value": "Male"
+        },
+        "glass": {
+          "confidence": 99.9405,
+          "value": "None"
+        },
+        "pose": {
+          "pitch_angle": {
+            "value": -0.000009
+          },
+          "roll_angle": {
+            "value": 9.45276
+          },
+          "yaw_angle": {
+            "value": 0.001326
+          }
+        },
+        "race": {
+          "confidence": 99.6022,
+          "value": "Black"
+        },
+        "smiling": {
+          "value": 79.4193
+        }
+      },
+      "face_id": "2d37f99686599fb63f49dfb38c67fd2e",
+      "position": {
+        "center": {
+          "x": 43.916667,
+          "y": 42.375
+        },
+        "eye_left": {
+          "x": 39.696833,
+          "y": 36.36575
+        },
+        "eye_right": {
+          "x": 49.244667,
+          "y": 38.75025
+        },
+        "height": 25.25,
+        "mouth_left": {
+          "x": 38.770667,
+          "y": 47.79125
+        },
+        "mouth_right": {
+          "x": 47.680333,
+          "y": 50.0765
+        },
+        "nose": {
+          "x": 44.075,
+          "y": 43.9415
+        },
+        "width": 16.833333
+      },
+      "tag": ""
+    }
+  ],
+  "img_height": 400,
+  "img_id": "87a3cbbf354d2a26eedded8b1e998966",
+  "img_width": 600,
+  "session_id": "b45b540b630748778ea8ced0c9f8f923",
+  "url": "http://theboombox.com/files/2016/01/Michael-Jackson-Legacy.jpg?w=600&h=0&zc=1&s=0&a=t&q=89"
+};
+
+document.getElementById("smiling").innerHTML=face.face[0].attribute.smiling.value;
+
+//console.log(face.face[0].attribute.smiling.value);
+
+
+var mapper = {
+_id: "56df6df73acb040300a5228e",
+username: "ccasal",
+gender: "Male",
+age: 30,
+favlang: "Javascript",
+location: [
+-74.033,
+40.719
+],
+htmlverified: "Yep (Thanks for giving us real data!)",
+__v: 0,
+updated_at: "2016-03-09T00:27:35.545Z",
+created_at: "2016-03-09T00:27:35.540Z"
+};
+
+console.log(mapper.username);
+
+var customer = 
+{
+     "firstName": "John",
+     "lastName": "Smith",
+     "age": 25,
+     "address":
+     {
+         "streetAddress": "21 2nd Street",
+         "city": "New York",
+         "state": "NY",
+         "postalCode": "10021"
+     },
+     "phoneNumber":
+     [
+         {
+           "type": "home",
+           "number": "212 555-1234"
+         },
+         {
+           "type": "fax",
+           "number": "646 555-4567"
+         }
+     ]
+ }
+
+
+function hello(){
+
+debugger;
+console.log(customer.firstName);
+console.log(customer.lastName);
+console.log(customer.address.state)
+
+}
+hello();
+// Log the First Name
+console.log(customer.firstName);
+// Log the Last Name
+console.log(customer.lastName);
+// Log the State of the Address
+console.log(customer.address.state)
+// Log the Home Phone Number
+console.log(customer.phoneNumber[0].number)
+// Log the Fax Number
+console.log(customer.phoneNumber[1].number)
+</script>
+	
+</body>
+</html>

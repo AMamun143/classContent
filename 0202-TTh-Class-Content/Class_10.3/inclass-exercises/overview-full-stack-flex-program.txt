@@ -1,0 +1,61 @@
+in with no extra whitespace or lines:
+
+lazy boy recliner, massage, meditation, hot shower, cheese fondue, hot coffee with cashew milk, kitten falling asleep on my lap
+Make a command line app that reads what's inside best_things_ever.txt and outputs each thing on a new line in the terminal. Do not output the commas.
+
+7. Instructor do (5 minutes)
+
+Go over previous exercise
+
+8. Student do (10 minutes)
+
+Make a command line app that takes an argument (the name of a text file - could be any text file), reads the contents inside of the file and console.logs that to the terminal screen
+
+Slack me whatever you have by the end of the 10 minutes so I can send feedback to you during the next exercise.
+
+If you don't have anything then slack me the problem so I know exactly what to help you with after class.
+
+9. Instructor do (5 minutes)
+
+Go over previous exercise
+
+10. Instructor do (5 minutes)
+
+Show students how the program they just wrote has a problem.
+
+"If you run it again, it overwrites the previous content."
+
+11. Partners do (2 minutes)
+
+Fill in the blank question:
+
+To write to a file with the internal fs package, you use writeFile to add to a file with the internal fs package, you use _________
+
+answer: appendFile
+
+12. Instructor do (5 minutes)
+
+Show how to append to a file
+
+append.js
+
+var fs = require('fs'); //reads and writes files
+
+fs.appendFile("log.txt", process.argv[2], function(err) {
+   if(err) {
+       return console.log(err);
+   }
+
+   console.log("log.txt was updated!");
+});
+13. Partners do (3 minutes)
+
+what will happen if I run this command?
+
+node append.js
+14. Partners do (3 minutes)
+
+what will happen if I run this command?
+
+node append.js 'stuff'
+15. Partners do (3 minutes)

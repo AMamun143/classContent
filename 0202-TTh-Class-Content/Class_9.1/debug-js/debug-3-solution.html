@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<!-- 
+	1. 
+		have the page display the following text:
+			just because you're a dude doesn't make you a bro - man.
+
+	2. Instead of JavaScript, refactor the below code to use jQuery
+
+-->
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div>Come at me bro</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+		var amIdude = false;
+
+		var dude = function(){
+			amIdude = true; //notice I took the var off of the variable amIdude
+		}
+
+		var bro = function(){
+			if (amIdude == true){
+				$('div').html('just because you\'re a dude doesn\'t make you a bro - man.');
+			}
+		}
+
+		dude();
+		bro();
+	});
+</script>
+</body>
+</html>

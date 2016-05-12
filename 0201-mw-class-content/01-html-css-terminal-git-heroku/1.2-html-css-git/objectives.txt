@@ -1,0 +1,5 @@
+* Students will be able to explain the importance of Version Control (GIT) and how to use it
+* Students will make a github respository, push their code to it, and share it with their partners
+* Students will make a basic HTML document
+* Students will be able to use basic HTML tags appropriately
+* Students will be able to implement basic CSS styling to HTML documents

@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button data-coolnesslevel="9" data-shirt="checkered" data-shoe="black">J is cool</button>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+
+		var game = {
+			counter : 0,
+			doThisWhenClicked : function(){
+
+				var coolnessLevel = parseInt($(this).data('coolnesslevel'));
+
+				if (coolnessLevel >= 9){
+					game.counter++;
+					alert(game.counter);
+				}
+
+			},
+			stuff : function(){
+				debugger;
+				alert(this.counter);
+			}
+		};
+
+		game.stuff(); //this inside of the function here is THE OBJECT
+
+		//this inside of the function will be the button, so if you want to access the game object inside of that function, you have to use game.theProperty
+		$('button').on('click', game.stuff);
+		//why did I not make it like game.doThisWhenClicked() - because stuff bro
+
+
+	</script>
+</body>
+</html>

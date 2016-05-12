@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var str = 'The quick brown fox jumps over the lazy dog.';
+
+	function pangramThatThing(s){
+		//INVISIBLE: var s = str;
+
+		if (s.length < 26){
+			return false;
+		}
+
+		var containerForMyLetters = [];
+		var arr = s.replace(/[^a-zA-Z-]/g, '').toLowerCase().split('');
+
+		for (var i=0; i< arr.length; i++){
+			//check if the letter is already inside. If it is then don't push it in
+			if (containerForMyLetters.indexOf(arr[i]) == -1){
+				containerForMyLetters.push(arr[i]);
+			}
+		
+		}
+
+		if(containerForMyLetters.length == 26){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	console.log(pangramThatThing(str));
+
+</script>
+</body>
+</html>

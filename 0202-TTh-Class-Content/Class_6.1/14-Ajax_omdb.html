@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1 id="title">No info</h1>
+<h2 id="year">No info</h2>
+
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+	var type = 'Jaws';
+	var queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&r=json";
+
+	$.ajax({url: queryURL, method: 'GET'}).done(function(XResponse) {
+	 	// $("#title").html(response.Title);
+	 	// $("#year").html(response.Year);
+	 	console.log(XResponse)
+	}); 
+
+</script>
+
+
+</body>
+</html>

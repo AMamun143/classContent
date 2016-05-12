@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Hangman Game Kind of - not solution</h1>
+
+	<div id="game">
+
+	</div>
+	
+
+<script type="text/javascript">
+	var listOfAnimals = ["giraffe", "cat", "possum", "eagle", "lion"];
+	var animal = listOfAnimals[Math.floor(Math.random() * listOfAnimals.length)];
+
+	var wordHTML = "";
+
+	for(var i=0; i < animal.length; i++){
+		if (animal[i] == 'a'){
+			wordHTML = wordHTML + " a ";
+		}else {
+			wordHTML = wordHTML + " _ ";
+		}
+		
+	}
+
+	document.querySelector('#game').innerHTML = wordHTML;
+
+	// Pseudo Code
+
+	// var listOfAnimals = ["giraffe", "cat", "possum", "eagle"];
+
+	// 1. we choose a word that the user has to guess from a list
+	
+	// var animal = listOfAnimals[Math.floor(Math.random() * listOfAnimals.length)];
+
+	// 2. we build a view 
+	// 	_ _ _ _ _ _ _ 
+
+	// 	//how can we use the animal variable to build the above view
+
+	// 	var wordHTML = "";
+
+	// 	for(var i=0; i < animal.length; i++){
+	// 		wordHTML = wordHTML + " _ ";
+	// 	}
+
+	// 	document.querySelector('#game').innerHTML = wordHTML;
+
+	// 3. we let the user guess a letter from the keyboard
+
+	// 	if the letter is in the word then 
+
+	// 	we rebuild the view
+
+	// 4. if the user guesses all the letters then the user wins
+
+</script>
+</body>
+</html>

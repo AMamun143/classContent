@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var brands = ['Acer', 'Apple', 'Sony', 'Samsung'];
+	var heroes = ['Black Panther', 'Cyborg', 'Black Canary', 'Donna Troy', 'Huntress', 'Blue Beetle', 'Captain Atom', 'Power Girl'];
+	var booksOnMyShelf = ['Calculus Early Transcendentals', 'Ravens', 'The Self Illusion', 'Hematology Clinical Principles and Applications'];
+	var thingsInFrontOfMe = ['laptop', 'beanbag', 'cats', 'slippers'];
+	var howIFeel = ['sleep deprived', 'wired on coffee', 'excited'];
+
+	function printEverythingOut(arr, lineBreak){
+		for (var i =0; i < arr.length; i++){
+			console.log(arr[i]);
+		}
+
+		// if lineBreak is a number then do dashes
+		if (!isNaN(lineBreak)){
+			console.log('---------------------');
+		}else { //else do zeroes
+			console.log('00000000000000000000');
+		}
+	}
+
+	printEverythingOut(brands, 0);
+	printEverythingOut(heroes, 'dkjflds');
+	printEverythingOut(booksOnMyShelf, 2);
+	printEverythingOut(thingsInFrontOfMe, 3);
+	printEverythingOut(howIFeel, 4);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
